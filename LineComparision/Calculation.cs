@@ -16,5 +16,29 @@ namespace LineComparision
             this.y1 = y1;
             this.y2 = y2;
         }
+        public double Length()
+        {
+            
+            double result = Math.Sqrt(Math.Pow((x2-x1), 2) + Math.Pow((y2-y1), 2));
+            Console.WriteLine(result);
+            return result;
+        }
+        public void EqualityCheck(double line1, double line2) 
+        {
+            if (line1.Equals(line2))
+                Console.WriteLine("Both the lines are equal");
+            else
+                Console.WriteLine("Lines are different");
+        }
+
+        public void ComparingLines(double line1, double line2)
+        {
+            if (line1.CompareTo(line2) == 0)
+                Console.WriteLine("Both the lines are equal");
+            if (line1.CompareTo(line2) > 0)
+                Console.WriteLine("Line1 is Greater than Line2");
+            else
+                Console.WriteLine("Line2 is Greater than Line1");
+        }
     }
 }
